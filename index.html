@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Visualization of Differences in Temperature Data Over Time</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="react"></div>
+  <div class="dialog hidden" id="dialog">
+    <span class="dialog-text"><em>Left-click</em> months to show them in the detail view below.<br>
+    <em>Right-click</em> months or years to set them as the basis of comparison.</span>
+    <button class="dialog-button" onClick="hideDialog()">×</button>
+  </div>
+  <script src="build/main.js" charset="utf-8"></script>
+  <script>
+    function hideDialog() {
+      document.getElementById("dialog").classList.add("hidden");
+    }
+    function showDialog() {
+      document.getElementById("dialog").classList.remove("hidden");
+    }
+    showDialog();
+  </script>
+</body>
